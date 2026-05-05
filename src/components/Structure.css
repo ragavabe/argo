@@ -1,0 +1,125 @@
+/* ===== Structure ===== */
+.structure {
+  background: var(--color-bg);
+}
+
+.structure__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.structure__title-accent {
+  color: var(--color-gold);
+}
+
+.structure__header .section-subtitle {
+  margin: 0 auto;
+}
+
+.structure__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.structure__main-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.structure__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeImg 0.5s ease;
+}
+
+@keyframes fadeImg {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.structure__main-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg) var(--space-xl);
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-gold);
+}
+
+.structure__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.structure__thumb {
+  position: relative;
+  height: 120px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.structure__thumb:hover {
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.structure__thumb--active {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.structure__thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.structure__thumb:hover .structure__thumb-img {
+  transform: scale(1.1);
+}
+
+.structure__thumb-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text);
+}
+
+.structure__thumb--active .structure__thumb-label {
+  color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .structure__main-image { height: 300px; }
+  .structure__thumbnails { grid-template-columns: repeat(2, 1fr); }
+  .structure__thumb { height: 100px; }
+}
+
+@media (max-width: 480px) {
+  .structure__main-image { height: 220px; }
+  .structure__thumb { height: 80px; }
+}
