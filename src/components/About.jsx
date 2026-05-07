@@ -16,7 +16,7 @@ function About() {
             <div className="about__image-accent" />
           </div>
           <div className="about__experience">
-            <span className="about__experience-number">10+</span>
+            <span className="about__experience-number">7+</span>
             <span className="about__experience-text">Anos de<br />Experiência</span>
           </div>
         </AnimatedSection>
@@ -48,15 +48,15 @@ function About() {
           <AnimatedSection delay={5}>
             <div className="about__stats">
               <div className="about__stat">
-                <span className="about__stat-number">2000+</span>
+                <span className="about__stat-number">500+</span>
                 <span className="about__stat-label">Alunos ativos</span>
               </div>
               <div className="about__stat">
-                <span className="about__stat-number">50+</span>
+                <span className="about__stat-number">25+</span>
                 <span className="about__stat-label">Equipamentos</span>
               </div>
               <div className="about__stat">
-                <span className="about__stat-number">15+</span>
+                <span className="about__stat-number">7</span>
                 <span className="about__stat-label">Profissionais</span>
               </div>
             </div>
